@@ -1,4 +1,6 @@
+// File: src/App.jsx
 import { useState } from 'react';
+import AdBanner from './AdBanner'; // Naya component import kar liya
 
 function App() {
   const [videoUrl, setVideoUrl] = useState('');
@@ -74,7 +76,7 @@ function App() {
 
       <header className="text-center py-8 relative z-10 animate-fade-in-down">
         <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight">
-          YT Nexus
+          YT Vedio Downloader
         </h1>
         <p className="text-gray-400 mt-3 text-sm md:text-base max-w-xl mx-auto font-medium">
           Premium tool for HD YouTube Thumbnails.
@@ -82,8 +84,9 @@ function App() {
       </header>
 
       {/* TOP ADSTERRA BANNER (728x90) */}
-      <div className="max-w-6xl mx-auto mb-8 bg-white/[0.02] border border-white/10 h-[90px] flex items-center justify-center rounded-2xl text-gray-500 backdrop-blur-md shadow-lg relative z-10">
-        <p className="font-semibold text-sm tracking-widest">Adsterra Top Banner (728x90)</p>
+      <div className="max-w-6xl mx-auto mb-8 bg-white/[0.02] border border-white/10 h-[100px] flex items-center justify-center rounded-2xl backdrop-blur-md shadow-lg relative z-10 overflow-hidden">
+        {/* API KEY YAHA DALNA */}
+        <AdBanner dataKey="bdf04c47681a60d80aefcb1f54f45f94" width={728} height={90} />
       </div>
 
       {/* MAIN CONTENT GRID */}
@@ -134,19 +137,22 @@ function App() {
 
         {/* RIGHT COLUMN: SIDEBAR ADS */}
         <div className="flex flex-col gap-6 w-full items-center lg:items-end">
-          <div className="w-full max-w-[300px] bg-white/[0.02] border border-white/10 h-[250px] flex items-center justify-center rounded-2xl text-gray-500 backdrop-blur-md shadow-lg">
-            <p className="text-center font-semibold text-sm tracking-widest">Adsterra Ad 1<br/>(300x250)</p>
+          <div className="w-full max-w-[300px] bg-white/[0.02] border border-white/10 h-[260px] flex items-center justify-center rounded-2xl backdrop-blur-md shadow-lg overflow-hidden">
+             {/* 1st 300x250 KEY YAHA DALNA */}
+             <AdBanner dataKey="af9a728243773602c92881a2f8bb0f00" width={300} height={250} />
           </div>
-          <div className="w-full max-w-[300px] bg-white/[0.02] border border-white/10 h-[250px] flex items-center justify-center rounded-2xl text-gray-500 backdrop-blur-md shadow-lg hidden sm:flex">
-            <p className="text-center font-semibold text-sm tracking-widest">Adsterra Ad 2<br/>(300x250)</p>
+          <div className="w-full max-w-[300px] bg-white/[0.02] border border-white/10 h-[260px] flex items-center justify-center rounded-2xl backdrop-blur-md shadow-lg hidden sm:flex overflow-hidden">
+             {/* 2nd 300x250 KEY YAHA DALNA */}
+             <AdBanner dataKey="bdf04c47681a60d80aefcb1f54f45f94" width={300} height={250} />
           </div>
         </div>
 
       </div>
 
       {/* BOTTOM ADSTERRA BANNER (728x90) */}
-      <div className="max-w-6xl mx-auto mt-10 mb-8 bg-white/[0.02] border border-white/10 h-[90px] flex items-center justify-center rounded-2xl text-gray-500 backdrop-blur-md shadow-lg relative z-10">
-        <p className="font-semibold text-sm tracking-widest">Adsterra Bottom Banner (728x90)</p>
+      <div className="max-w-6xl mx-auto mt-10 mb-8 bg-white/[0.02] border border-white/10 h-[100px] flex items-center justify-center rounded-2xl backdrop-blur-md shadow-lg relative z-10 overflow-hidden">
+        {/* BOTTOM 728x90 KEY YAHA DALNA */}
+        <AdBanner dataKey="bdf04c47681a60d80aefcb1f54f45f94" width={728} height={90} />
       </div>
 
       <article className="max-w-6xl mx-auto mb-10 p-8 bg-white/[0.02] border border-white/5 rounded-[2rem] text-gray-400 relative z-10 shadow-lg">
