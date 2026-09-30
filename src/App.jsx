@@ -166,7 +166,11 @@ function App() {
           <li>One-click secure download functionality.</li>
         </ul>
       </article>
-      
+      {/* BOTTOM ADSTERRA BANNER (728x90) */}
+      <div className="max-w-6xl mx-auto mt-10 mb-8 bg-white/[0.02] border border-white/10 h-[100px] flex items-center justify-center rounded-2xl backdrop-blur-md shadow-lg relative z-10 overflow-hidden">
+        {/* BOTTOM 728x90 KEY YAHA DALNA */}
+        <AdBanner dataKey="bdf04c47681a60d80aefcb1f54f45f94" width={728} height={90} />
+      </div>
     </div>
   );
 }
