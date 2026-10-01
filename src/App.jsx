@@ -76,7 +76,7 @@ function App() {
 
       <header className="text-center py-8 relative z-10 animate-fade-in-down">
         <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight">
-          YT Vedio Downloader
+          YT ThumbNail Downloader
         </h1>
         <p className="text-gray-400 mt-3 text-sm md:text-base max-w-xl mx-auto font-medium">
           Premium tool for HD YouTube Thumbnails.
